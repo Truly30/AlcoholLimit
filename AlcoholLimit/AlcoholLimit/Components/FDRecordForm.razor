@@ -7,22 +7,22 @@
 
     <div class="mb-3">
         <label for="name" class="form-label">Drink Item:</label>
-        <InputText @bind-Value="drinkItemDTO.Name" class="form-control" id="name" />
+        <InputText @bind-Value="drinkItemDTO.Name" class="form-control" id="drink-name" />
 
         <label for="size" class="form-label">Volume (ml): </label>
-        <InputNumber @bind-Value="drinkItemDTO.Size" class="form-control" id="size" />
+        <input @bind="drinkItemDTO.Size" class="form-control" id="size" />
 
         <label for="alcohol-percent" class="form-label">Alcohol %:</label>
-        <InputNumber @bind-Value="drinkItemDTO.AlcoholPercent" onchange="" class="form-control" id="alcohol-percent" />
+        <input @bind="drinkItemDTO.AlcoholPercent" class="form-control" id="alcohol-percent" />
         
         <label for="cost" class="form-label">Cost:</label>
-        <InputNumber @bind-Value="drinkItemDTO.Cost" class="form-control" id="cost" />
+        <input @bind="drinkItemDTO.Cost" class="form-control" id="cost" />
 
         <label for="calories" class="form-label">Calories:</label>
-        <InputNumber @bind-Value="drinkItemDTO.Calories" class="form-control" id="calories" />
+        <input @bind="drinkItemDTO.Calories" class="form-control" id="calories" />
 
-        <button class="btn btn-danger" style="margin-top: 1em" type="button" @onclick="OnCanceled">@CancelText</button>
-        <button class="btn btn-primary" style="margin-top: 1em" type="submit">@SubmitText</button>
+        <button class="btn btn-danger" style="margin-top: 1em" type="button" @onclick="OnCanceled" id="cancel-btn">@CancelText</button>
+        <button class="btn btn-primary" style="margin-top: 1em" type="submit" id="submit-btn">@SubmitText</button>
     </div>
 </EditForm>
 

@@ -21,14 +21,14 @@ else
 
     @if(@AppState.isDrinking)
     {
-        <button class="btn btn-danger" @onclick="changeStatus">Stop drinking session</button>
+        <button class="btn btn-danger" @onclick="changeStatus" id="stop-drinking-btn">Stop drinking session</button>
     } 
     else 
     {
-        <button class="btn btn-primary" @onclick="changeStatus">Start drinking session</button>
+        <button class="btn btn-primary" @onclick="changeStatus" id="start-drinking-btn">Start drinking session</button>
     }
 
-    <button class="btn btn-primary" style="margin-left:0.1em;" disabled="@AppState.hideComponents" @onclick="ToggleAddItem">Add new custom drink</button>
+    <button class="btn btn-primary" style="margin-left:0.1em;" disabled="@AppState.hideComponents" @onclick="ToggleAddItem" id="add-custom-drink-btn">Add new custom drink</button>
     <p></p>
 
     <p>Blood alchohol level (estimated): @bacCategory (@displayBac%)</p>
@@ -41,7 +41,7 @@ else
                 <option value="@drink.ID">@drink.Name (@drink.AlcoholPercent%, @drink.Size ml)</option>
             }
         </select>
-        <button class="btn btn-sm btn-primary" style="margin-left:0.1em;" disabled="@AppState.hideComponents" @onclick="addSelectedDrink">Add this drink</button>
+        <button class="btn btn-sm btn-primary" style="margin-left:0.1em;" disabled="@AppState.hideComponents" @onclick="addSelectedDrink" id="add-drink-btn">Add this drink</button>
     </div>
 
 
@@ -62,7 +62,7 @@ else
                     <td>@drink.Name</td>
                     <td>@drink.AlcoholPercent</td>
                     <td>@drink.Size</td>
-                    <td><button class="btn btn-danger" @onclick="() => {deleteItem(drink);}">&#10006;</button></td>
+                    <td><button class="btn btn-danger delete-item-btn" @onclick="() => {deleteItem(drink);}">&#10006;</button></td>
                 </tr>
             }
         </tbody>

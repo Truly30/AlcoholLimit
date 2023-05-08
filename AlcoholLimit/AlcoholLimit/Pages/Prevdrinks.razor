@@ -9,7 +9,7 @@
 <UpperMenu/>
 <h1>Previous Drinking Page</h1>
 
-<button class="btn btn-primary" @onclick="Refresh">Refresh</button>
+<button class="btn btn-primary" @onclick="Refresh" id="refresh-btn">Refresh</button>
 
 @if (cDrinkItemCache == null)
 {
@@ -45,7 +45,7 @@ else
 								<td>@drinkItemMap[drinkItem.DrinkItemID].AlcoholPercent</td>
 								<td>@drinkItemMap[drinkItem.DrinkItemID].Cost</td>
 								<td>@drinkItemMap[drinkItem.DrinkItemID].Calories</td>
-								<td><button class="btn btn-danger" @onclick="() => {DeleteItem(drinkItemKey, drinkItem);}">&#10006;</button></td>
+								<td><button class="btn btn-danger delete-item-btn" @onclick="() => {DeleteItem(drinkItemKey, drinkItem);}">Delete</button></td>
 							}
 						</tr>
 					}

@@ -3,7 +3,7 @@
 <div class="top-row ps-3 navbar navbar-dark">
 	<div class="container-fluid">
 		<a class="navbar-brand" href="">AlcoholLimit</a>
-		<button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+		<button title="Navigation menu" id="navmenu-open" class="navbar-toggler" @onclick="ToggleNavMenu">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 	</div>
@@ -12,17 +12,17 @@
 <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
 	<nav class="flex-column">
 		<div class="nav-item px-3">
-			<NavLink class="nav-link" href="startdrink">
+			<NavLink class="nav-link" href="startdrink" id="start-drink-navlink">
 				<span class="oi oi-account-login" aria-hidden="true"></span> Start drinking
 			</NavLink>
 		</div>
 		<div class="nav-item px-3">
-			<NavLink class="nav-link" href="drink">
+			<NavLink class="nav-link" href="drink" id="drink-db-navlink">
 				<span class="oi oi-plus" aria-hidden="true"></span> Drink database
 			</NavLink>
 		</div>
 		<div class="nav-item px-3">
-			<NavLink class="nav-link" href="prevdrinks">
+			<NavLink class="nav-link" href="prevdrinks" id="prevdrinks-navlink">
 				<span class="oi oi-list-rich" aria-hidden="true"></span> Previous drinkings
 			</NavLink>
 		</div>

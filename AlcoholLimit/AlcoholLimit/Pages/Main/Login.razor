@@ -19,47 +19,47 @@ else
 	{
 		<h3>Register</h3>
 		<div class="mb-3">
-			<label for="exampleFormControlInput1" class="form-label">Name</label>
-			<input required @bind="profile.Name" class="form-control" id="exampleFormControlInput1">
+			<label for="reg-name" class="form-label">Name</label>
+			<input required @bind="profile.Name" class="form-control" id="reg-name">
 		</div>
 		<div class="mb-3">
-			<label for="exampleFormControlInput1" class="form-label">Email address</label>
-			<input required @bind="profile.Email" class="form-control" id="exampleFormControlInput1" placeholder="e.g. name@example.com">
+			<label for="email" class="form-label">Email address</label>
+			<input required @bind="profile.Email" class="form-control" id="email" placeholder="e.g. name@example.com">
 		</div>
 		<div class="mb-3">
-			<label for="exampleFormControlInput1" class="form-label">Password</label>
-			<input required type="password" @bind="profile.Password" class="form-control" id="exampleFormControlInput1">
+			<label for="password" class="form-label">Password</label>
+			<input required type="password" @bind="profile.Password" class="form-control" id="password">
 		</div>
 		<div class="mb-3">
-			<label for="exampleFormControlInput1" class="form-label">Weight [kg]</label>
-			<input min="20" required @bind="profile.Weight" class="form-control" id="exampleFormControlInput1" placeholder="e.g. 80">
+			<label for="weight" class="form-label">Weight [kg]</label>
+			<input min="20" required @bind="profile.Weight" class="form-control" id="weight" placeholder="e.g. 80">
 		</div>
 		<div class="mb-3">
-			<label for="exampleFormControlInput1" class="form-label">Latest weekly</label>
-			<input min="20" required @bind="profile.latestWeekly" class="form-control" id="exampleFormControlInput1" placeholder="e.g. 2022.12.05. (leave empty for the current date)">
+			<label for="lw" class="form-label">Latest weekly</label>
+			<input min="20" required @bind="profile.latestWeekly" class="form-control" id="lw" placeholder="e.g. 2022.12.05. (leave empty for the current date)">
 		</div>
 		<div class="mb-3">
-			<label for="exampleFormControlInput1" class="form-label">Sex</label>
-			<select @bind="profile.Sex">
+			<label for="sex" class="form-label">Sex</label>
+			<select @bind="profile.Sex" id="sex">
 				<option value="MAN">MAN</option>
 				<option value="WOMAN">WOMAN</option>
 			</select>
 		</div>
-		<button class="btn btn-primary" @onclick="register">Register</button>
+		<button id="reg-btn" class="btn btn-primary" @onclick="register">Register</button>
 	}
 	else
 	{
 		<h3>Login</h3>
 
 		<div class="mb-3">
-			<label for="exampleFormControlInput1" class="form-label">Email address</label>
-			<input @bind="profile.Email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+			<label for="log-email" class="form-label">Email address</label>
+			<input @bind="profile.Email" class="form-control" id="log-email" placeholder="name@example.com">
 		</div>
 		<div class="mb-3">
-			<label for="exampleFormControlInput1" class="form-label">Password</label>
-			<input type="password" @bind="profile.Password" class="form-control" id="exampleFormControlInput1">
+			<label for="log-pass" class="form-label">Password</label>
+			<input type="password" @bind="profile.Password" class="form-control" id="log-pass">
 		</div>
-		<button class="btn btn-primary" @onclick="login">Login</button>
+		<button id="log-btn" class="btn btn-primary" @onclick="login">Login</button>
 	}
 
 	@if (errors.Length > 0)
